@@ -26,14 +26,14 @@
 
 /* light-theme colors */
 :root {
-  --bg-color: whitesmoke;
+  --bg-color: ghostwhite;
   --text: rgba(46, 49, 49, 1);
   --text-70: rgba(46, 49, 49, 0.7);
   --text-contrast: var(--white);
   --theme: mistyrose;
-  --medium: lavender;
-  --contrast: lightsteelblue;
-  --accent: orangered;
+  --medium: gainsboro;
+  --contrast: aliceblue;
+  --accent: firebrick;
   --white: white;
   --black: rgba(46, 49, 49, 1);
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
@@ -135,9 +135,11 @@
   margin-block-start: var(--line-h);
 }
 
+/*
 main * + *:not(p) {
   margin-block-start: calc(var(--line-h)*2);
 }
+*/
 
 
 /* Make images easier to work with */
@@ -246,6 +248,7 @@ nav .active {
 
 ul {
   padding: 0;
+  list-style-type: none;
 }
 
 input:not(:placeholder-shown):invalid {
@@ -274,7 +277,6 @@ hr {
 }
 
 .header {
-  background-color: var(--theme);
   min-height: calc(var(--line-h)*3);
 }
 
@@ -286,6 +288,7 @@ hr {
 
 .logo {
   margin-inline-end: auto;
+  padding-inline-start: 0;
 }
 
 .logo .img {
@@ -438,6 +441,7 @@ hr {
 
 .cta:hover {
   background-color: var(--text);
+  border-color: transparent;
 }
 
 .cta a, .cta a:visited {
@@ -477,7 +481,7 @@ hr {
   overflow: hidden;
 }
 
-.social svg:hover {
+.social svg:hover, .links svg:hover:not(.main-page) {
   fill: var(--accent);
 }
 
@@ -488,6 +492,10 @@ hr {
 
   .links .button {
 	margin: 0;
+  }
+
+  .h1 {
+	background-color: var(--medium);
   }
 
   .h1 .flex {
@@ -525,5 +533,38 @@ aside h2 {
   aside .button {
 	margin-inline-end: 0;
   }
+
+.brands {
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: calc(var(--line-h)*6);
+}
+
+
+.brands .logo img {
+  height: calc(var(--line-h)*1.5);
+  margin-block: calc(var(--line-h)*2);
+}
+
+.socials {
+  gap: 1em;
+}
+
+.link-lists {
+  padding-block-end: calc(var(--line-h)*4);
+}
+
+.link-list li {
+  margin-block: calc(var(--line-h)*0.5);
+}
+
+
+.link-list a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: initial;
+}
 
 
