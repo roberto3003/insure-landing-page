@@ -490,10 +490,6 @@ hr {
 	margin: 0;
   }
 
-  aside .button {
-	margin-inline-end: 0;
-  }
-
   .h1 .flex {
 	align-items: normal;
 	flex-wrap: wrap-reverse;
@@ -515,3 +511,18 @@ hr {
   .footer section {
 	margin-block-end: 0;
   }
+
+  aside {
+	background-color: var(--medium);
+  margin-block: calc(var(--line-h)*4);
+}
+
+aside h2 {
+  margin-block: 2em;
+}
+
+  aside .button {
+	margin-inline-end: 0;
+  }
+
+
