@@ -512,9 +512,10 @@ hr {
 	margin-block-end: 0;
   }
 
-  aside {
+  aside .container {
 	background-color: var(--medium);
   margin-block: calc(var(--line-h)*4);
+  padding: var(--padding);
 }
 
 aside h2 {
